@@ -1,119 +1,164 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== GLOBAL ===== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
     color: #333;
 }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-}
-
-.light {
-    background-color: #f4f4f4;
-}
-
-h1, h2, h3 {
-    margin-bottom: 20px;
-}
-
-p {
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-}
-
-/* ===== HERO ===== */
+/* HERO SECTION */
 .hero {
-    padding: 80px 20px;
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #6c63ff, #4a47a3);
+    color: white;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* ===== PROFILE IMAGE ===== */
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid #eaeaea;
+    border: 4px solid white;
 }
 
-/* ===== BUTTON ===== */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s ease;
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.btn:hover {
-    background-color: #444;
+.hero p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-/* ===== SKILLS GRID ===== */
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+/* PROJECT SECTION */
+.projects {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.skill-card {
-    background-color: #222;
-    color: #fff;
-    padding: 15px 25px;
-    border-radius: 5px;
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
 }
 
-/* ===== PROJECT CARD ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
 .project-card {
-    max-width: 400px;
-    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
+.project-content {
     padding: 20px;
-    margin-top: 40px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    .profile-img {
-        width: 160px;
-        height: 160px;
-    }
+.project-content h3 {
+    margin-bottom: 10px;
+}
 
-    .skills-grid {
-        flex-direction: column;
-        align-items: center;
+.project-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.btn:hover {
+    background-color: #4a47a3;
+}
+/* CONTACT SECTION */
+.contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+.contact-form button {
+    width: fit-content;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 }

@@ -2,62 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jane Emmanuel | Junior Frontend Developer</title>
+    <title>Jane Emmanuel | Frontend Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Correct CSS link (since styles.css is in root folder) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- HERO SECTION -->
     <header class="hero">
         <img src="assets/images/profile.jpg" alt="Jane Emmanuel" class="profile-img">
-        <h1>Hi, I'm Jane</h1>
-        <p class="subtitle">Junior Frontend Developer</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <h1>Hi, I'm Jane Emmanuel</h1>
+        <p>A Frontend Developer building clean and responsive websites.</p>
     </header>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section">
-        <h2>About Me</h2>
-        <p>
-            Frontend developer focused on responsive UI, clean layout systems,
-            and structured semantic design. Experienced in WordPress, custom CSS,
-            and interface refinement.
+    <!-- PROJECTS SECTION -->
+    <section class="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+
+            <!-- TO DO APP -->
+            <div class="project-card">
+                <img src="assets/images/todo-app.png" alt="To Do App">
+                <div class="project-content">
+                    <h3>To-Do App</h3>
+                    <p>A simple productivity app built with HTML, CSS and JavaScript.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- BLOG LAYOUT -->
+            <div class="project-card">
+                <img src="assets/images/blog-layout.png" alt="Blog Layout">
+                <div class="project-content">
+                    <h3>Blog Layout Design</h3>
+                    <p>A responsive blog layout built using modern CSS layout techniques.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">
+            Have a project in mind or want to collaborate? Let's talk.
         </p>
-    </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section class="section light">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">Responsive Design</div>
+        <div class="contact-container">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <p><strong>Email:</strong> janeemmanuel247@gmail.com</p>
+                <p><strong>Phone:</strong> +234 8108179570</p>
+                <p><strong>Location:</strong> Nigeria</p>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="from_email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
+
         </div>
     </section>
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="assets/images/todo-app.png" alt="To-Do App Screenshot">
-            <h3>To-Do App</h3>
-            <p>Interactive to-do application built with HTML, CSS & JavaScript.</p>
-        </div>
-    </section>
+<script>
+    (function(){
+        emailjs.init("YMPFUBEDTYGDXZV9q"); 
+    })();
 
-    <!-- ===== CONTACT ===== -->
-    <section class="section light">
-        <h2>Contact</h2>
-        <p>Email: your@email.com</p>
-    </section>
+    document.getElementById("contact-form")
+        .addEventListener("submit", function(event) {
+            event.preventDefault();
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 Jane Emmanuel</p>
-    </footer>
-
+            emailjs.sendForm(
+                "service_6b8jg0n",
+                "template_tmhtt4k",
+                this
+            )
+            .then(function() {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message. Try again.");
+                console.log(error);
+            });
+        });
+</script>
 </body>
 </html>
+
