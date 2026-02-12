@@ -2,7 +2,7 @@
 
 ## Description
 A responsive personal portfolio landing page built with HTML5 and CSS3.
-
+NOTE: “This is my foundational frontend project. Future projects focus on JavaScript, UI logic, and React.”
 ## Features
 - Semantic HTML structure
 - Responsive layout
