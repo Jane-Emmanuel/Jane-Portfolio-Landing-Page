@@ -3,3 +3,4 @@ A static blog layout recreated from my WordPress experience using pure HTML and 
 
 🔗 Live Demo
 https://jane-emmanuel.github.io/responsive-blog-layout/
+https://jane-emmanuel.github.io/js-faq-accordion/
