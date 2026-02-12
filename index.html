@@ -12,44 +12,71 @@
     <header class="hero">
         <img src="assets/images/profile.jpg" alt="Jane Emmanuel" class="profile-img">
         <h1>Hi, I'm Jane Emmanuel</h1>
-        <p>A Frontend Developer building clean and responsive websites.</p>
+        <p>Junior Frontend Developer building clean, responsive, and interactive web applications.</p>
     </header>
 
     <!-- PROJECTS SECTION -->
     <section class="projects">
         <h2>My Projects</h2>
-
         <div class="project-grid">
 
-            <!-- TO DO APP -->
+            <!-- Portfolio Landing Page -->
             <div class="project-card">
-                <img src="assets/images/todo-app.png" alt="To Do App">
+                <img src="assets/images/portfolio-landing.png" alt="Portfolio Landing Page">
                 <div class="project-content">
-                    <h3>To-Do App</h3>
-                    <p>A simple productivity app built with HTML, CSS and JavaScript.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>Portfolio Landing Page</h3>
+                    <p>A responsive landing page showcasing my frontend skills, projects, and contact form.</p>
+                    <a href="https://jane-emmanuel.github.io/jane-portfolio-landing-page/" class="btn" target="_blank">View Project</a>
                 </div>
             </div>
 
-            <!-- BLOG LAYOUT -->
+            <!-- Responsive Blog Layout -->
             <div class="project-card">
                 <img src="assets/images/blog-layout.png" alt="Blog Layout">
                 <div class="project-content">
                     <h3>Blog Layout Design</h3>
-                    <p>A responsive blog layout built using modern CSS layout techniques.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <p>A static blog layout recreated from WordPress experience using pure HTML and CSS.</p>
+                    <a href="https://jane-emmanuel.github.io/responsive-blog-layout/" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="project-card">
+                <img src="assets/images/faq-accordion.png" alt="FAQ Accordion">
+                <div class="project-content">
+                    <h3>FAQ Accordion</h3>
+                    <p>An interactive FAQ section demonstrating DOM manipulation and event handling using JavaScript.</p>
+                    <a href="https://jane-emmanuel.github.io/js-faq-accordion/" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+
+            <!-- To-Do App -->
+            <div class="project-card">
+                <img src="assets/images/todo-app.png" alt="To Do App">
+                <div class="project-content">
+                    <h3>To-Do App</h3>
+                    <p>A task management app built with HTML, CSS, and JavaScript, including localStorage persistence.</p>
+                    <a href="https://jane-emmanuel.github.io/javascript-todo-app/" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+
+            <!-- Job Listing UI -->
+            <div class="project-card">
+                <img src="assets/images/job-listing-ui.png" alt="Job Listing UI">
+                <div class="project-content">
+                    <h3>Job Listing UI</h3>
+                    <p>A frontend-only job board interface with category filtering and search functionality.</p>
+                    <a href="https://jane-emmanuel.github.io/job-listing-ui/" class="btn" target="_blank">View Project</a>
                 </div>
             </div>
 
         </div>
     </section>
+
     <!-- CONTACT SECTION -->
     <section class="contact">
         <h2>Contact Me</h2>
-        <p class="contact-intro">
-            Have a project in mind or want to collaborate? Let's talk.
-        </p>
-
+        <p class="contact-intro">Have a project in mind or want to collaborate? Let's talk.</p>
         <div class="contact-container">
 
             <!-- Contact Info -->
@@ -59,41 +86,40 @@
                 <p><strong>Location:</strong> Nigeria</p>
             </div>
 
+            <!-- Contact Form -->
             <form id="contact-form" class="contact-form">
-    <input type="text" name="from_name" placeholder="Your Name" required>
-    <input type="email" name="from_email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-</form>
-
+                <input type="text" name="from_name" placeholder="Your Name" required>
+                <input type="email" name="from_email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
 
         </div>
     </section>
-<!-- EmailJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-    (function(){
-        emailjs.init("YMPFUBEDTYGDXZV9q"); 
-    })();
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YMPFUBEDTYGDXZV9q"); 
+        })();
 
-    document.getElementById("contact-form")
-        .addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            emailjs.sendForm(
-                "service_6b8jg0n",
-                "template_tmhtt4k",
-                this
-            )
-            .then(function() {
-                alert("Message sent successfully!");
-            }, function(error) {
-                alert("Failed to send message. Try again.");
-                console.log(error);
+        document.getElementById("contact-form")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                emailjs.sendForm(
+                    "service_6b8jg0n",
+                    "template_tmhtt4k",
+                    this
+                )
+                .then(function() {
+                    alert("Message sent successfully!");
+                }, function(error) {
+                    alert("Failed to send message. Try again.");
+                    console.log(error);
+                });
             });
-        });
-</script>
+    </script>
+
 </body>
 </html>
-
