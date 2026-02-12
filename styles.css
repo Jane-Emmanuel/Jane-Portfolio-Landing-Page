@@ -14,7 +14,7 @@ body {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #6c63ff, #4a47a3);
+    background: linear-gradient(135deg, #ff6fa5, #d63384);
     color: white;
 }
 
@@ -91,7 +91,7 @@ body {
 .btn {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #6c63ff;
+    background-color: #ff6fa5;
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -100,7 +100,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #4a47a3;
+    background-color: #d63384;
 }
 
 /* CONTACT SECTION */
@@ -151,7 +151,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #6c63ff;
+    border-color: #ff6fa5;
 }
 
 .contact-form button {
