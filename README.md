@@ -16,7 +16,7 @@ A responsive personal portfolio landing page built with HTML5 and CSS3.
 - Flexbox
 
 ## Live Demo
-(Add Netlify or Vercel link here)
+
 
 ## What I Learned
 - Improved semantic layout structure
