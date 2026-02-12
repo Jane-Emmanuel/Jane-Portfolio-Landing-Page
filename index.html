@@ -10,7 +10,11 @@
 
     <!-- HERO SECTION -->
     <header class="hero">
-        <img src="assets/images/profile.jpg" alt="Jane Emmanuel" class="profile-img">
+        <picture>
+    <source media="(max-width: 600px)" srcset="assets/images/profile-small.jpg">
+    <img src="assets/images/profile.jpg" alt="Jane Emmanuel" class="profile-img">
+</picture>
+
         <h1>Hi, I'm Jane Emmanuel</h1>
         <p>Junior Frontend Developer building clean, responsive, and interactive web applications.</p>
     </header>
@@ -22,7 +26,7 @@
 
             <!-- Portfolio Landing Page -->
             <div class="project-card">
-                <img src="assets/images/portfolio-landing.png" alt="Portfolio Landing Page">
+                <img src="assets/images/portfolio-landing-page.png" alt="Portfolio Landing Page">
                 <div class="project-content">
                     <h3>Portfolio Landing Page</h3>
                     <p>A responsive landing page showcasing my frontend skills, projects, and contact form.</p>
@@ -42,7 +46,7 @@
 
             <!-- FAQ Accordion -->
             <div class="project-card">
-                <img src="assets/images/faq-accordion.png" alt="FAQ Accordion">
+                <img src="assets/images/FAQ-Accordion.png" alt="FAQ Accordion">
                 <div class="project-content">
                     <h3>FAQ Accordion</h3>
                     <p>An interactive FAQ section demonstrating DOM manipulation and event handling using JavaScript.</p>
@@ -77,16 +81,15 @@
     <section class="contact">
         <h2>Contact Me</h2>
         <p class="contact-intro">Have a project in mind or want to collaborate? Let's talk.</p>
+
         <div class="contact-container">
 
-            <!-- Contact Info -->
             <div class="contact-info">
                 <p><strong>Email:</strong> janeemmanuel247@gmail.com</p>
                 <p><strong>Phone:</strong> +234 8108179570</p>
                 <p><strong>Location:</strong> Nigeria</p>
             </div>
 
-            <!-- Contact Form -->
             <form id="contact-form" class="contact-form">
                 <input type="text" name="from_name" placeholder="Your Name" required>
                 <input type="email" name="from_email" placeholder="Your Email" required>
@@ -97,7 +100,7 @@
         </div>
     </section>
 
-    <!-- EmailJS Script -->
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
         (function(){
@@ -107,6 +110,7 @@
         document.getElementById("contact-form")
             .addEventListener("submit", function(event) {
                 event.preventDefault();
+
                 emailjs.sendForm(
                     "service_6b8jg0n",
                     "template_tmhtt4k",
