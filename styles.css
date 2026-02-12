@@ -7,29 +7,114 @@
 
 /* ===== GLOBAL ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
-section {
+.section {
     padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
 }
 
 /* ===== HERO ===== */
 .hero {
+    padding: 80px 20px;
     text-align: center;
-    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #eee;
 }
 
 /* ===== BUTTON ===== */
 .btn {
     display: inline-block;
     padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
-/* ===== GRID ===== */
+.btn:hover {
+    background-color: #444;
+}
+
+/* ===== SKILLS GRID ===== */
 .skills-grid {
     display: flex;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    padding: 15px 25px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ===== PROJECT CARD ===== */
+.project-card {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
